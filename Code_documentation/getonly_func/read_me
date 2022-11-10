@@ -1,0 +1,9 @@
+# The set of 3 getonly function is a very crude solution
+# that attempts to extract allele frequency information from
+# raws tsv generated with VCFtools, which are too large to be read into 
+# memory in one go
+# The way this raw file is generated gives it the following column order
+# CHROM, POS, REF, ALT, 10x AF columns, 10x AN columns, 10x AC columns, 
+# with one for each population
+# each function specify which sets of columns to read using a string that 
+# is passed to ColClasses argument of read.table
